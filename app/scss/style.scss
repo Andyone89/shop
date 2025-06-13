@@ -1,5 +1,8 @@
+@use 'reset';
+
+
 html,
-body{
+body {
     height: 100%;
 }
 
@@ -11,4 +14,45 @@ body{
 
 .main {
     flex: 1;
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 0 40px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__logo{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    &__lang {
+        display: flex;
+    }
+    &__actions{
+        display: flex;
+        gap: 20qx;
+        align-items: center;
+    }
+}
+
+.menu{
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+}
+
+.logo {
+   display: inline-block;
 }
