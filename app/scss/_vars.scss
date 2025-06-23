@@ -1,5 +1,5 @@
 $color-accent: #3B2317;
-$color-primery: #513c27;
+$color-primary: #513c27;
 $color-text-muted: #94897c;
 $bg-primary: #e9e1d7;
 
@@ -22,4 +22,11 @@ $bg-primary: #e9e1d7;
 %lora-500{
   font-family: 'Lora-Medium', serif;
     font-weight: 500;
+}
+
+%button-reset{
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
