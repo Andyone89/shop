@@ -58,7 +58,7 @@ body {
 
 .footer {
     font-size: 16px;
-    color: vars.$color-text-muted;
+    color: vars.$color-primary;
 
     &__menu-list {
         display: flex;
@@ -119,9 +119,10 @@ body {
     }
 
     &__bottom {
-        color: vars.$bg-primary;
-        padding: 0 7px 9px;
+        color: vars.$color-primary;
+        padding: 7px 0 9px;
         font-size: 11px;
+        background-color: vars.$bg-primary;
     }
 
     &__bottom-inner {
