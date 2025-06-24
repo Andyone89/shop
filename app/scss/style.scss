@@ -11,6 +11,15 @@ body {
     color: vars.$color-accent;
 }
 
+.promo {
+    background-color: vars.$bg-primary;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: vars.$color-primary;
+    padding-block: 7px 9px;
+}
+
 .header {
     padding: 20px 0 40px;
     font-size: 16px;
@@ -80,7 +89,7 @@ body {
         margin-bottom: 45px;
     }
 
-    &__element-title{
+    &__element-title {
         opacity: .5;
         margin-bottom: 20px;
     }
@@ -106,6 +115,7 @@ body {
         border-bottom: 1px solid vars.$bg-primary;
         color: vars.$color-text-muted;
         padding: 1px 30px 5px 0;
+
         &::placeholder {
             color: vars.$color-text-muted;
         }
@@ -114,7 +124,7 @@ body {
     &__form-btn {
         position: absolute;
         top: 5px;
-       right: 0;
+        right: 0;
         @extend %button-reset;
     }
 
@@ -141,12 +151,50 @@ body {
         gap: 0 37px;
     }
 
-    &__bottom-item + .footer__bottom-item {
+    &__bottom-item+.footer__bottom-item {
         position: relative;
-        &::before{
+
+        &::before {
             content: '|';
             position: absolute;
             left: -21px;
         }
+    }
+}
+
+.top {
+    min-height: 90vh;
+    background-image: image-set(url('../images/top-bg.avif') type("image/avif"),
+            url('../images/top-bg.webp') type("image/webp"),
+            url(../images/top-bg.jpg));
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    &__content {
+        padding-block: 115px 50px;
+        max-width: 446px;
+        margin-right: 134px;
+    }
+
+    &__title {
+        @extend %lora-400;
+        font-size: 80px;
+        margin-bottom: 60px;
+        line-height: 1.2;
+    }
+
+    &__link {
+        display: inline-block;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: vars.$color-accent;
+        padding: 12px 38px;
+        border-radius: 3px;
     }
 }
