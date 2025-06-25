@@ -164,11 +164,10 @@ body {
 
 .top {
     min-height: 90vh;
-    background-image: image-set(url('../images/top-bg.avif') type("image/avif"),
-            url('../images/top-bg.webp') type("image/webp"),
-            url(../images/top-bg.jpg));
+    
     background-repeat: no-repeat;
     background-size: cover;
+    
 
     &__inner {
         display: flex;
@@ -185,7 +184,7 @@ body {
     &__title {
         @extend %lora-400;
         font-size: 80px;
-        margin-bottom: 60px;
+        margin-bottom: 0px;
         line-height: 1.2;
     }
 
