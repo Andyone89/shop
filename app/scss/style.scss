@@ -197,3 +197,26 @@ body {
         border-radius: 3px;
     }
 }
+.new-collection{
+    padding: 150px 0;
+    background-image: url(../images/new-collection-decor.svg);
+    background-repeat: no-repeat;
+    &__inner{
+        display: flex;
+    }
+    &__content{
+        padding-top: 75px;
+        padding-left: 40px;
+    }
+    &__title{
+        margin-bottom: 50px;
+        font-size: 45px;
+        @extend %lora-400;
+    }
+    &__text{
+        color: vars.$color-text-muted;
+    }
+    &__text + .new-collection__text{
+        margin-top: 25px;
+    }
+}
