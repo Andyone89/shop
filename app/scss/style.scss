@@ -164,10 +164,10 @@ body {
 
 .top {
     min-height: 90vh;
-    
+
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 
     &__inner {
         display: flex;
@@ -197,26 +197,65 @@ body {
         border-radius: 3px;
     }
 }
-.new-collection{
-    padding: 150px 0;
+
+.new-collection {
     background-image: url(../images/new-collection-decor.svg);
     background-repeat: no-repeat;
-    &__inner{
+    background-position: -36px -36%; 
+
+    &__inner {
+       padding: 150px 0;
         display: flex;
     }
-    &__content{
-        padding-top: 75px;
-        padding-left: 40px;
+
+    &__content {
+        padding: 75px 40px 0 40px;
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
     }
-    &__title{
+
+    &__title {
         margin-bottom: 50px;
         font-size: 45px;
         @extend %lora-400;
     }
-    &__text{
+
+    &__text {
         color: vars.$color-text-muted;
     }
-    &__text + .new-collection__text{
+
+    &__text+.new-collection__text {
         margin-top: 25px;
+    }
+
+    &__btn {
+        display: inline-block;
+        font-size: 16px;
+        color: vars.$color-text-muted;
+        border: 1px solid vars.$bg-primary;
+        padding: 10px 65px;
+        margin-top: auto;
+        align-self: flex-start;
+    }
+
+    &__box {
+        position: relative;
+        padding-inline: 40px;
+        display: flex;
+
+    }
+
+    &__box-img {
+        position: absolute;
+        top: 0;
+        left: -75px;
+        max-width: fit-content;
+    }
+
+    &__caption {
+        width: 290px;
+        margin-block: auto 40px;
+        color: vars.$color-text-muted;
     }
 }
