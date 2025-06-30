@@ -259,3 +259,48 @@ body {
         color: vars.$color-text-muted;
     }
 }
+
+.join-us{
+    &__inner{
+        display: flex;
+        gap: 40px;
+    }
+
+    &__img{
+        max-width: 540px;
+    }
+    &__box{
+        padding: 40px 40px 40px;
+    }
+    &__title{
+        text-transform: uppercase;
+        @extend %lora-400;
+        margin-bottom: 20px;
+        font-size: 45px;
+    }
+    &__text{
+        @extend %lora-400;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    &__input{
+        width: 100%;
+        display: block;
+        border: none;
+        border-bottom: 1px solid vars.$bg-primary;
+        padding: 10px 0;
+    }
+    &__btn{
+        display: block;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        background-color: vars.$color-accent;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 12px;
+    }
+    &__caption{
+        font-size: 11px;
+    }
+}
