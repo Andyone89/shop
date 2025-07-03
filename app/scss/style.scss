@@ -375,5 +375,44 @@ body {
         color: vars.$color-text-muted;
         border: 1px solid vars.$bg-primary;
     }
+}
 
+.our-advantages {
+    background-color: vars.$bg-primary;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__inner {
+        padding: 64px 130px 34px 0;
+        margin-left: auto;
+    }
+
+    &__title {
+        font-size: 45px;
+        @extend %lora-400;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        column-count: 2;
+        column-gap: 80px;
+    }
+
+    &__item {
+        padding-left: 50px;
+        margin-bottom: 30px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 22px;
+            left: 0;
+            background-image: url(../images/list-decor.svg);
+        }
+    }
 }
