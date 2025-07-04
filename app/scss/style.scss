@@ -381,15 +381,28 @@ body {
     background-color: vars.$bg-primary;
 
     &__wrapper {
+        position: relative;
         display: flex;
         flex-direction: column;
     }
 
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+    }
+    
     &__inner {
+        position: relative;
         padding: 64px 130px 34px 0;
         margin-left: auto;
     }
-
+    &__decor{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
     &__title {
         font-size: 45px;
         @extend %lora-400;
