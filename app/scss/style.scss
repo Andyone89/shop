@@ -316,6 +316,8 @@ body {
         padding: 12px;
         border: none;
         cursor: pointer;
+        position: relative;
+        z-index: 10;
     }
 
     &__form-caption {
@@ -325,6 +327,7 @@ body {
 
 .designer {
     padding: 150px 0 210px;
+    position: relative;
 
     &__inner {
         display: flex;
@@ -340,6 +343,14 @@ body {
         font-size: 45px;
         @extend %lora-400;
         margin-bottom: 50px;
+
+    }
+    &__decor{
+        position: absolute;
+        top: -250px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
     }
 
     &__text {
@@ -441,6 +452,8 @@ body {
         gap: 20px;
         padding: 0 40px;
         background-image: url(../images/our-blog-decor.svg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
     }
 
     &__title {
