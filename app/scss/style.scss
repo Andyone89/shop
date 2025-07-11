@@ -1,8 +1,7 @@
-@use 'reset';
-@use 'vars';
-@use 'fonts';
-@use 'global';
-
+@use "reset";
+@use "vars";
+@use "fonts";
+@use "global";
 
 body {
     @extend %opensans-400;
@@ -90,7 +89,7 @@ body {
     }
 
     &__element-title {
-        opacity: .5;
+        opacity: 0.5;
         margin-bottom: 20px;
     }
 
@@ -155,7 +154,7 @@ body {
         position: relative;
 
         &::before {
-            content: '|';
+            content: "|";
             position: absolute;
             left: -21px;
         }
@@ -167,7 +166,6 @@ body {
 
     background-repeat: no-repeat;
     background-size: cover;
-
 
     &__inner {
         display: flex;
@@ -243,7 +241,6 @@ body {
         position: relative;
         padding-inline: 40px;
         display: flex;
-
     }
 
     &__box-img {
@@ -343,9 +340,9 @@ body {
         font-size: 45px;
         @extend %lora-400;
         margin-bottom: 50px;
-
     }
-    &__decor{
+
+    &__decor {
         position: absolute;
         top: -250px;
         left: 50%;
@@ -432,7 +429,7 @@ body {
         position: relative;
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             width: 30px;
             height: 22px;
@@ -468,70 +465,82 @@ body {
         color: vars.$color-text-muted;
         font-size: 16px;
     }
-    &__btn-link{
+
+    &__btn-link {
         font-size: 16px;
         display: inline-block;
         padding: 10px 93px;
         border: 1px solid vars.$bg-primary;
         color: vars.$color-text-muted;
     }
-    &__box-link{
+
+    &__box-link {
         margin-bottom: 5px;
         @extend %lora-400;
         color: vars.$color-text-muted;
     }
-    &__box-img{
+
+    &__box-img {
         margin-bottom: 20px;
     }
-    &__box-right{
+
+    &__box-right {
         grid-row: span 2;
         align-self: center;
     }
-    &__box-date{
+
+    &__box-date {
         color: vars.$color-primary;
         font-size: 16px;
         @extend %opensans-300;
     }
-    &__box-bottom{
+
+    &__box-bottom {
         grid-column: span 2;
         margin-left: auto;
     }
 }
 
-.appointment{
+.appointment {
     padding: 50px 0 130px;
     background-image: url(../images/appointment-decor.svg);
     background-repeat: no-repeat;
     background-position: center top;
-    &__title{
+
+    &__title {
         text-align: center;
         font-size: 45px;
         @extend %lora-400;
         margin-bottom: 77px;
     }
-    &__box{
+
+    &__box {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
         padding: 0 40px;
     }
-    &__form{
+
+    &__form {
         display: flex;
         flex-direction: column;
         margin-bottom: 0;
     }
-    &__form-title{
+
+    &__form-title {
         @extend %lora-400;
         font-size: 30px;
         margin-bottom: 80px;
     }
-    &__form-text{
+
+    &__form-text {
         font-size: 20px;
         @extend %opensans-700;
         margin-bottom: 30px;
         color: vars.$color-text-muted;
     }
-    &__input{
+
+    &__input {
         font-size: 20px;
         padding-bottom: 10px;
         margin-bottom: 20px;
@@ -539,17 +548,19 @@ body {
         border-bottom: 1px solid vars.$color-text-muted;
         color: vars.$color-text-muted;
         background-color: transparent;
-        &::placeholder{
+
+        &::placeholder {
             color: vars.$color-text-muted;
         }
     }
-    &__btn{
+
+    &__btn {
         font-size: 20px;
         @extend %lora-400;
         margin-top: auto;
         color: #fff;
         text-transform: uppercase;
-        padding: 12px; 
+        padding: 12px;
         border-radius: 3px;
         background-color: vars.$color-accent;
         border: none;
@@ -557,9 +568,34 @@ body {
     }
 }
 
-.collections-top{
+.collections-top {
     min-height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+
+.collections-main {
+    .breadcrumbs{
+        padding-top: 50px;
+    }
+    padding: 30px 0 80px;
+}
+
+.breadcrumbs {
+    &__list {
+        display: flex;
+        gap: 14px;
+        color: vars.$color-text-muted;
+        font-size: 16px;
+    }
+
+    &__item {
+        position: relative;
+        }
+        &__item + .breadcrumbs__item::before{
+            content: '/';
+            position: absolute;
+            left: -9px;
+        }
+    }
