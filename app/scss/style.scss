@@ -576,9 +576,10 @@ body {
 }
 
 .collections-main {
-    .breadcrumbs{
+    .breadcrumbs {
         padding-top: 50px;
     }
+
     padding: 30px 0 80px;
 }
 
@@ -592,10 +593,11 @@ body {
 
     &__item {
         position: relative;
-        }
-        &__item + .breadcrumbs__item::before{
-            content: '/';
-            position: absolute;
-            left: -9px;
-        }
     }
+
+    &__item + .breadcrumbs__item::before {
+        content: '/';
+        position: absolute;
+        left: -9px;
+    }
+}
