@@ -579,7 +579,6 @@ body {
     .breadcrumbs {
         padding-top: 50px;
     }
-
     padding: 30px 0 80px;
 }
 
@@ -595,9 +594,41 @@ body {
         position: relative;
     }
 
-    &__item + .breadcrumbs__item::before {
+    &__item+.breadcrumbs__item::before {
         content: '/';
         position: absolute;
         left: -9px;
+    }
+}
+
+.collections {
+    padding-bottom: 100px;
+
+    &__title {
+        font-size: 45px;
+        @extend %lora-400;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    &__inner {
+        display: grid;
+    }
+    &__item{
+        position: relative;
+    }
+    &__like{    
+        position: absolute;
+    }
+    &__item-text{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 12px;
+        text-transform: uppercase;
+        @extend %lora-400;
+        background-color: vars.$color-accent;
+        color: #fff;
     }
 }
