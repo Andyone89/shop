@@ -612,9 +612,17 @@ body {
     }
     &__inner {
         display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
     }
     &__item{
         position: relative;
+        &:nth-child(5){
+            grid-column: span 2;
+        }
+        &:nth-child(12){
+            grid-column: span 2;
+        }
     }
     &__like{    
         position: absolute;
