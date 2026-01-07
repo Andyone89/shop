@@ -612,17 +612,29 @@ body {
     }
     &__inner {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "aa ab ba bb"
+                             "cc cc ca cb"
+                             "cc cc da db" 
+                             "ea eb ee ee"
+                             "fa fb ee ee";
         gap: 40px;
     }
     &__item{
         position: relative;
-        &:nth-child(5){
-            grid-column: span 2;
-        }
-        &:nth-child(12){
-            grid-column: span 2;
-        }
+        &:nth-child(1){ grid-area: aa; }
+        &:nth-child(2){ grid-area: ab; }
+        &:nth-child(3){ grid-area: ba; }
+        &:nth-child(4){ grid-area: bb; }
+        &:nth-child(5){ grid-area: cc; }
+        &:nth-child(6){ grid-area: ca; }
+        &:nth-child(7){ grid-area: cb; }
+        &:nth-child(8){ grid-area: da; }
+        &:nth-child(9){ grid-area: db; }
+        &:nth-child(10){ grid-area: ea; }
+        &:nth-child(11){ grid-area: eb; }
+        &:nth-child(12){ grid-area: ee; }
+        &:nth-child(13){ grid-area: fb; }
+        &:nth-child(14){ grid-area: fa; }
     }
     &__like{    
         position: absolute;
